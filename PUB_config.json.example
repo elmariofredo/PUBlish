@@ -1,0 +1,7 @@
+{
+  "version": 0.1,
+  "data":  "_data/main.json",
+  "build": {
+    "folder": "_build"
+  }
+}

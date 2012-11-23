@@ -3,7 +3,7 @@ PUBlish
 
 An offline Node.js publisher for small websites  
 
-Ok to be fair this is very early stage, I didn't put together all aspects what it should do and how.  
+Ok to be fair this is very early stage, Here is what it should do and how.  
 
 ### What I need
 

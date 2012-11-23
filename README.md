@@ -32,12 +32,12 @@ Create small website with simple SEO frendly structure with posibility of easy u
   * Everytime user will change any of the file in Source folder, server will rerender it to Build folder
   * After every rebuild server will relod browser view
   * In browser user will have toolbar where he can change
-    * PUB_config.json
-      * All Site settings
-    * Data.json
-      * This is representation of Site models
-    * Hit PUBlish Button which will deploy builded and compiled Site
-    * In first stage user can edit files only in system editor
+      * PUB_config.json
+         * All Site settings
+      * Data.json
+         * This is representation of Site models
+      * Hit PUBlish Button which will deploy builded and compiled Site
+      * In first stage user can edit files only in system editor
 
 
 

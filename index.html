@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>PUBlish by elmariofredo</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">PUBlish</h1>
+        <p class="header">Offline Node.js publisher for small websites</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/elmariofredo/PUBlish/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/elmariofredo/PUBlish/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/elmariofredo/PUBlish">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/elmariofredo">elmariofredo</a></p>
+
+
+      </header>
+      <section>
+        <h1>PUBlish</h1>
+
+<p>An offline Node.js publisher for small websites  </p>
+
+<p>Ok to be fair this is very early stage, Here is what it should do and how.  </p>
+
+<h3>What I need</h3>
+
+<p>Create small website with simple SEO frendly structure with posibility of easy updating using web interface.</p>
+
+<h3>How it will work</h3>
+
+<ul>
+<li>User will install node.js + my package with dependencies
+
+<ul>
+<li><code>npm install PUBlish</code></li>
+</ul>
+</li>
+<li>User will bootstrap basic structure using current twitter bootstrap(with posibility of using own template)
+
+<ul>
+<li>
+<code>PUB</code>
+
+<ul>
+<li>Command will look for PUB_config.json and if not present it will continue bootstraping process</li>
+<li>For completing bootstrap i will ask for following</li>
+<li>Project Name</li>
+<li>Template [Twitter | Twitter modified | {GIT URL}]</li>
+<li>Multi lang [y | N]
+
+<ul>
+<li>[y]
+
+<ul>
+<li>Space separated list of langs {String}</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Deployment server [y | create | N]
+
+<ul>
+<li>[ create ]
+
+<ul>
+<li>Provider [Virtualmaster | Amazon]</li>
+<li>API Key [{Key}]</li>
+</ul>
+</li>
+<li>Host [{FQDN}]</li>
+<li>Method [scp | ftp]<br>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>At the end of bootstrap process it will stratup PUBlish server and open webiste in browser
+
+<ul>
+<li>Everytime user will change any of the file in Source folder, server will rerender it to Build folder</li>
+<li>After every rebuild server will relod browser view</li>
+<li>In browser user will have toolbar where he can change
+
+<ul>
+<li>PUB_config.json
+
+<ul>
+<li>All Site settings</li>
+</ul>
+</li>
+<li>Data.json
+
+<ul>
+<li>This is representation of Site models</li>
+</ul>
+</li>
+<li>Hit PUBlish Button which will deploy builded and compiled Site</li>
+<li>In first stage user can edit files only in system editor</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h2>TODO:</h2>
+
+<ol>
+<li>
+<p>Create Bootstrap script</p>
+
+<ul>
+<li>Investigate on how to create proper npm module</li>
+<li>What are testing options</li>
+<li>Class naming and structure</li>
+<li>Commandline prompter</li>
+<li>Create production server(see #4)<br>
+</li>
+</ul>
+</li>
+<li>
+<p>Create local PUB</p>
+
+<ul>
+<li>Speed up on file change watcher</li>
+<li>Add auto browser update<br>
+</li>
+</ul>
+</li>
+<li>
+<p>Create Deployment script</p>
+
+<ul>
+<li>Build Source Dir</li>
+<li>Compile js</li>
+<li>Deploy to server(<a href="http://www.carbonsilk.com/node/deploying-nodejs-a">http://www.carbonsilk.com/node/deploying-nodejs-a</a>)<br>
+</li>
+</ul>
+</li>
+<li>
+<p>Create PUBlish Platform for Virtualmaster</p>
+
+<ul>
+<li>ArchLinux(<a href="https://www.archlinux.org/">https://www.archlinux.org/</a>)</li>
+<li>Nginx or Mongoose <a href="http://code.google.com/p/mongoose/">http://code.google.com/p/mongoose/</a><br>
+</li>
+</ul>
+</li>
+</ol>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name"          : "PUBlish"
+, "version"       : "0.7"
+, "description"   : "Offline Node.js publisher for small websites"
+, "homepage"      : [ "http://elmariofredo.github.com/PUBlish/"
+                    , "https://github.com/elmariofredo/PUBlish"]
+, "repository"    : { "type" : "git"
+                    , "url"  : "https://github.com/elmariofredo/PUBlish.git"
+                    }
+, "keywords"      : ["website", "generator", "publish"]
+, "author"        : "el Mario Fredo <mario@vejlupek.cz>"
+, "maintainers"   : "el Mario Fredo <mario@vejlupek.cz>"
+, "licenses"      : ["MIT"]
+, "dependencies"  : { "chokidar" : ">=0.4.0"
+                    }
+, "bin"           : "bin/PUB"
+, "preferGlobal"  : true
+, "main"          : "lib/PUB.js"
+, "scripts"       : { "test" : "node lib/PUBlish/cli.js spec" }
+}

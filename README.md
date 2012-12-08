@@ -7,7 +7,7 @@ Ok to be fair this is very early stage, Here is what it should do and how.
 
 ### What I need
 
-Create small website with simple SEO frendly structure with posibility of easy updating using web interface.
+Create small website with simple SEO friendly structure with possibility of easy updating using web interface.
 
 ### How it will work
 
@@ -15,7 +15,7 @@ Create small website with simple SEO frendly structure with posibility of easy u
   * ```npm install PUBlish```
 * User will bootstrap basic structure using current twitter bootstrap(with posibility of using own template)
   * ```PUB```
-     * Command will look for PUB_config.json and if not present it will continue bootstraping process
+     * Command will look for PUB_config.json and if not present it will continue bootstrapping process
      * For completing bootstrap i will ask for following
        * Project Name
        * Template [Twitter | Twitter modified | {GIT URL}]
@@ -28,9 +28,9 @@ Create small website with simple SEO frendly structure with posibility of easy u
              * API Key [{Key}]
          * Host [{FQDN}]
          * Method [scp | ftp]        
-* At the end of bootstrap process it will stratup PUBlish server and open webiste in browser
-  * Everytime user will change any of the file in Source folder, server will rerender it to Build folder
-  * After every rebuild server will relod browser view
+* At the end of bootstrap process it will startup PUBlish server and open website in browser
+  * Every time user will change any of the file in Source folder, server will re-render it to Build folder
+  * After every rebuild server will reload browser view
   * In browser user will have toolbar where he can change
       * PUB_config.json
          * All Site settings
@@ -43,25 +43,40 @@ Create small website with simple SEO frendly structure with posibility of easy u
 
 ## TODO:
 
+0. Choose tools
+*	Testing
+		* http://visionmedia.github.com/mocha/
+		* http://pivotal.github.com/jasmine/
+*	Deployment
+		* https://npmjs.org/package/automaton
+	*	http://gruntjs.com/
+	* IO Event watcher
+		* https://npmjs.org/package/walkdir   
+	* Get inspiration about structure from other npm modules
+  * https://github.com/senchalabs/connect
+		* https://github.com/mhevery/jasmine-node/tree/master/lib/jasmine-node
+  * coffee? https://github.com/viatropos/tower
+
+
 1. Create Bootstrap script
-  * Investigate on how to create proper npm module
-  * What are testing options
-  * Class naming and structure
-  * Commandline prompter
-  * Create production server(see #4)  
+	* Investigate on how to create proper npm module
+	* What are testing options
+	* Class naming and structure
+	* Command line prompter
+	* Create production server(see #4)  
   
 
 
 2. Create local PUB
-  * Speed up on file change watcher
-  * Add auto browser update  
+	* Speed up on file change watcher
+	* Add auto browser update  
   
 
 
 3. Create Deployment script
-  * Build Source Dir
-  * Compile js
-  * Deploy to server(http://www.carbonsilk.com/node/deploying-nodejs-a)  
+	* Build Source Dir
+	* Compile js
+	* Deploy to server(http://www.carbonsilk.com/node/deploying-nodejs-a)  
   
 
 4. Create PUBlish Platform for Virtualmaster

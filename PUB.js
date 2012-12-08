@@ -1,38 +1,45 @@
 #!/usr/bin/env node
 
-var watch = require('watch');
+var chokidar = require('chokidar');
+
 
 var PUB = require(__dirname+'/PUB.lib.js');
 
 var cwd = process.cwd()+'/';
 
-var config = {}, 
-    data = {};
+var config = {}, data = {};
 
 var data_init = function() {
   config = require(cwd+'PUB_config.json');
-  config.cwd = cwd
+  config.cwd = cwd;
   data = require(cwd+config.source.folder+'/'+config.build.data);
-}
+};
 
 data_init();
 PUB.init(config, data);
 
 
-watch.watchTree(config.source.folder, function (file, curr, prev) {
+var watcher = chokidar.watch(config.source.folder, {ignored: /^\./, persistent: true});
 
-  data_init();
+console.log('Finally in the PUB, wathing for beverage...');
 
-  if (typeof file == "object" && prev === null && curr === null) {
-    console.log('Finally in the PUB, wathing for beverage...');
-  } else if (prev === null) {
+watcher
+  .on('add', function(file) {
     console.log('We have new drink on the bar... let\'s serve it', file);
     PUB.pass_me_that(config.cwd+file, config, data);
-  } else if (curr.nlink === 0) {
-    console.log('One glas just crushed... oh my!', file)
-    // TODO: file removal
-  } else {
+  })
+  .on('change', function(file) {
     console.log('So you want another one...', file);
     PUB.pass_me_that(config.cwd+file, config, data);
-  }
-})
+  })
+  .on('unlink', function(file) {
+    console.log('is it bird? ariplane? not it\'s big crush in your favorite PUB!', file);
+  })
+  .on('error', function(error) {
+    console.log('One glas just crushed... oh my!', file);
+    // TODO: file removal
+  })
+  .on('all', function () {
+    data_init();
+  });
+

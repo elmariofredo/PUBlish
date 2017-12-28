@@ -45,7 +45,7 @@ Create small website with simple SEO friendly structure with possibility of easy
 
 0. Choose tools
 *	Testing
-		* http://visionmedia.github.com/mocha/
+		* http://mochajs.org/
 		* http://pivotal.github.com/jasmine/
 *	Deployment
 		* https://npmjs.org/package/automaton
